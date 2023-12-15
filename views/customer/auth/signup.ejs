@@ -1,25 +1,25 @@
-<%- include("../../shared/includes/head", { pageTitle: "Signup" }) %>
-<link rel="stylesheet" href="/styles/forms.css">
-<link rel="stylesheet" href="/styles/auth.css">
+<%- include('../../shared/includes/head', { pageTitle: 'Signup' }) %>
+  <link rel="stylesheet" href="/styles/forms.css">
+  <link rel="stylesheet" href="/styles/auth.css">
 </head>
 <body>
-  <%- include("../../shared/includes/header") %>
+  <%- include('../../shared/includes/header') %>
   <main>
-    <h1>Create new account</h1>
+    <h1>Create New Account</h1>
     <% if (inputData.errorMessage) { %>
       <section class="alert">
-        <h2>Invalid input</h2>
+        <h2>Invalid Input</h2>
         <p><%= inputData.errorMessage %></p>
       </section>
     <% } %>
     <form action="/signup" method="POST">
       <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
       <p>
-        <label for="email">Email</label>
+        <label for="email">E-Mail</label>
         <input type="email" id="email" name="email" value="<%= inputData.email %>" required>
       </p>
       <p>
-        <label for="confirm-email">Confirm email</label>
+        <label for="confirm-email">Confirm Email</label>
         <input type="email" id="confirm-email" name="confirm-email" value="<%= inputData.confirmEmail %>" required>
       </p>
       <p>
@@ -28,7 +28,7 @@
       </p>
       <hr>
       <p>
-        <label for="fullname">Full name</label>
+        <label for="fullname">Full Name</label>
         <input type="text" id="fullname" name="fullname" value="<%= inputData.fullname %>" required>
       </p>
       <p>
@@ -36,16 +36,22 @@
         <input type="text" id="street" name="street" value="<%= inputData.street %>" required>
       </p>
       <p>
-        <label for="postal">Postal code</label>
-        <input type="text" id="postal" name="postal" minlength="5" maxlength="5" value="<%= inputData.postal %>" required>
+        <label for="postal">Postal Code</label>
+        <input 
+          type="text" 
+          id="postal" 
+          name="postal" 
+          minlength="5" 
+          maxlength="5" 
+          value="<%= inputData.postal %>"
+          required>
       </p>
       <p>
         <label for="city">City</label>
         <input type="text" id="city" name="city" value="<%= inputData.city %>" required>
       </p>
-      <button class="btn">Create account</button>
+      <button class="btn">Create Account</button>
       <p id="switch-form"><a href="/login">Login instead</a></p>
     </form>
   </main>
-<%- include("../../shared/includes/footer") %>  
-
+<%- include('../../shared/includes/footer') %>

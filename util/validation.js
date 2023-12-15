@@ -1,10 +1,10 @@
 function isEmpty(value) {
-  return !value || value.trim() === "";
+  return !value || value.trim() === '';
 }
 
 function userCredentialsAreValid(email, password) {
   return (
-    email && email.includes("@") && password && password.trim().length >= 6
+    email && email.includes('@') && password && password.trim().length >= 6
   );
 }
 

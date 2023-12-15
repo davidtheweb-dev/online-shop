@@ -111,7 +111,7 @@ main {
     color: var(--color-primary-500);
     border-color: var(--color-primary-500);
   }
-
+  
   #mobile-menu-btn {
     display: none;
   }

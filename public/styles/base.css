@@ -51,7 +51,7 @@ main {
   margin: 0 auto;
 }
 
-ul,
+ul, 
 ol {
   list-style: none;
   margin: 0;
@@ -79,6 +79,16 @@ a {
   border-color: var(--color-primary-700);
 }
 
+.btn-alt {
+  background-color: transparent;
+  color: var(--color-primary-500);
+}
+
+.btn-alt:hover,
+.btn-alt:active {
+  background-color: var(--color-primary-500-bg);
+}
+
 .alert {
   border-radius: var(--border-radius-small);
   background-color: var(--color-error-100);
@@ -90,4 +100,16 @@ a {
   font-size: 1rem;
   margin: var(--space-2) 0;
   text-transform: uppercase;
+}
+
+.alert p {
+  margin: var(--space-2) 0;
+}
+
+.badge {
+  margin-left: var(--space-2);
+  padding: 0.15rem var(--space-4);
+  border-radius: 10rem;
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-500-contrast);
 }
